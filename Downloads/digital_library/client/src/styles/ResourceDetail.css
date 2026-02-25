@@ -1,0 +1,66 @@
+/* Resource Detail Page Styles */
+.resource-detail-page {
+  background-color: #f8f9fa;
+  padding: 40px 0;
+  min-height: 80vh;
+}
+
+.resource-header-card {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.resource-header-card .card-img {
+  border-radius: 0;
+}
+
+.resource-badges {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.resource-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.resource-actions button {
+  flex: 1;
+}
+
+.card-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  color: white;
+}
+
+.card-header h5,
+.card-header h6 {
+  color: white;
+  margin: 0;
+}
+
+.resource-sidebar-card {
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-tabs .nav-link {
+  color: #666;
+  border: none;
+  border-bottom: 3px solid transparent;
+  font-weight: 500;
+}
+
+.nav-tabs .nav-link.active {
+  color: #667eea;
+  border-bottom-color: #667eea;
+  background: transparent;
+}
+
+.nav-tabs .nav-link:hover {
+  color: #667eea;
+}

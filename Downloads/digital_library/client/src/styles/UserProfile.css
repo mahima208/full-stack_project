@@ -1,0 +1,63 @@
+/* User Profile Styles */
+.user-profile {
+  background-color: #f8f9fa;
+  padding: 40px 0;
+}
+
+.user-profile h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.user-profile .card {
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.user-profile .card-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  color: white;
+  padding: 15px 20px;
+}
+
+.user-profile .card-header h5 {
+  color: white;
+  margin: 0;
+}
+
+.user-profile .card-header button {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.user-profile .card-header button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.user-profile .list-group-item {
+  border: none;
+  border-bottom: 1px solid #e9ecef;
+  padding: 15px 20px;
+}
+
+.user-profile .list-group-item:last-child {
+  border-bottom: none;
+}
+
+.user-profile h6 {
+  color: #667eea;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.user-profile p {
+  color: #666;
+  margin: 0;
+}
+
+.user-profile .badge {
+  padding: 0.5rem 0.75rem;
+  font-weight: 500;
+}

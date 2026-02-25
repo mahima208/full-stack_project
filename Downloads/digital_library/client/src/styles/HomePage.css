@@ -1,0 +1,138 @@
+/* Home Page Styles */
+.home-page {
+  background-color: #f8f9fa;
+}
+
+.hero-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 80px 0;
+  margin-bottom: 60px;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.search-form {
+  display: flex;
+  gap: 10px;
+}
+
+.search-input {
+  flex: 1;
+}
+
+.search-button {
+  padding: 0.5rem 2rem;
+}
+
+.hero-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.stat-box {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+.stat-box h3 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.stat-box p {
+  opacity: 0.9;
+  margin: 0;
+}
+
+.categories-section,
+.featured-resources,
+.features-section {
+  padding: 60px 0;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.category-card {
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.category-icon {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.resource-card {
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.resource-card:hover {
+  transform: translateY(-5px);
+}
+
+.resource-meta {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.resource-stats {
+  display: flex;
+  justify-content: space-around;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.resource-stats span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.feature-box {
+  text-align: center;
+  padding: 20px;
+}
+
+.feature-icon {
+  color: #667eea;
+  margin-bottom: 15px;
+}
+
+.feature-box h5 {
+  margin-bottom: 10px;
+}
+
+.feature-box p {
+  color: #666;
+  font-size: 0.95rem;
+}

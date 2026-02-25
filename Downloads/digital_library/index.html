@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Library - Educational Resource Platform</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #667eea;
+            --secondary-color: #764ba2;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+        }
+        
+        .navbar-custom {
+            background: #2c3e50;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white !important;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 0;
+            margin-bottom: 60px;
+        }
+        
+        .hero-title {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .search-form {
+            display: flex;
+            gap: 10px;
+            margin-top: 30px;
+        }
+        
+        .stat-box {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            margin-bottom: 15px;
+        }
+        
+        .stat-box h3 {
+            font-size: 2rem;
+            margin-bottom: 5px;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+        .category-card, .resource-card {
+            border: none;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .category-card:hover, .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .category-icon {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        
+        .resource-stats {
+            display: flex;
+            justify-content: space-around;
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 10px;
+        }
+        
+        .feature-box {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .feature-icon {
+            color: #667eea;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #5568d3 0%, #6b3fa0 100%);
+            color: white;
+        }
+        
+        .demo-banner {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+        
+        .status-badge {
+            display: inline-block;
+            background: #28a745;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand brand" href="#">
+                <i class="fas fa-book me-2"></i>Digital Library
+                <span class="status-badge">✓ Running</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="ms-auto">
+                    <a href="#search" class="nav-link text-white me-3">
+                        <i class="fas fa-search me-2"></i>Search
+                    </a>
+                    <a href="#features" class="nav-link text-white me-3">Features</a>
+                    <button class="btn btn-outline-light btn-sm me-2">Login</button>
+                    <button class="btn btn-light btn-sm">Register</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Demo Banner -->
+    <div class="container mt-3">
+        <div class="demo-banner">
+            <i class="fas fa-info-circle"></i> 
+            <strong>Demo Mode</strong> - This is a live preview of the Digital Library frontend. 
+            Backend API is configured and ready to deploy.
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h1 class="hero-title">Welcome to Digital Library</h1>
+                    <p class="fs-5">
+                        Access thousands of educational resources, research papers, and study materials
+                    </p>
+                    <div class="search-form">
+                        <input type="text" class="form-control form-control-lg" 
+                               placeholder="Search for resources, topics, or authors...">
+                        <button class="btn btn-light btn-lg">
+                            <i class="fas fa-search"></i> Search
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stat-box">
+                        <h3>10K+</h3>
+                        <p>Resources</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>500K+</h3>
+                        <p>Downloads</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>100K+</h3>
+                        <p>Active Users</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title">Explore by Category</h2>
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <div class="card category-card">
+                        <div class="card-body text-center">
+                            <div class="category-icon">📐</div>
+                            <h5>Mathematics</h5>
+                            <p class="text-muted">450 resources</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card category-card">
+                        <div class="card-body text-center">
+                            <div class="category-icon">🔬</div>
+                            <h5>Science</h5>
+                            <p class="text-muted">380 resources</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card category-card">
+                        <div class="card-body text-center">
+                            <div class="category-icon">📚</div>
+                            <h5>Literature</h5>
+                            <p class="text-muted">290 resources</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card category-card">
+                        <div class="card-body text-center">
+                            <div class="category-icon">🗣️</div>
+                            <h5>Languages</h5>
+                            <p class="text-muted">320 resources</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Resources Section -->
+    <section class="py-5" style="background-color: #f8f9fa;">
+        <div class="container">
+            <h2 class="section-title">Most Downloaded Resources</h2>
+            <div class="row">
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card resource-card">
+                        <div style="height: 150px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white;">
+                            <i class="fas fa-file-pdf fa-3x"></i>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Advanced Mathematics</h5>
+                            <p class="text-muted small">By Dr. Smith</p>
+                            <div class="mb-2">
+                                <span class="badge bg-info me-2">Textbook</span>
+                                <span class="badge bg-success">Advanced</span>
+                            </div>
+                            <div class="resource-stats">
+                                <span><i class="fas fa-download"></i> 1.2K</span>
+                                <span><i class="fas fa-eye"></i> 5K</span>
+                                <span><i class="fas fa-star"></i> 4.5</span>
+                            </div>
+                            <button class="btn btn-primary w-100 mt-3">View Resource</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card resource-card">
+                        <div style="height: 150px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); display: flex; align-items: center; justify-content: center; color: white;">
+                            <i class="fas fa-book fa-3x"></i>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Physics Fundamentals</h5>
+                            <p class="text-muted small">By Prof. Johnson</p>
+                            <div class="mb-2">
+                                <span class="badge bg-info me-2">Study Guide</span>
+                                <span class="badge bg-warning">Intermediate</span>
+                            </div>
+                            <div class="resource-stats">
+                                <span><i class="fas fa-download"></i> 980</span>
+                                <span><i class="fas fa-eye"></i> 4.2K</span>
+                                <span><i class="fas fa-star"></i> 4.3</span>
+                            </div>
+                            <button class="btn btn-primary w-100 mt-3">View Resource</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card resource-card">
+                        <div style="height: 150px; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); display: flex; align-items: center; justify-content: center; color: white;">
+                            <i class="fas fa-file-word fa-3x"></i>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">English Literature</h5>
+                            <p class="text-muted small">By Dr. Williams</p>
+                            <div class="mb-2">
+                                <span class="badge bg-info me-2">Research Paper</span>
+                                <span class="badge bg-success">Advanced</span>
+                            </div>
+                            <div class="resource-stats">
+                                <span><i class="fas fa-download"></i> 750</span>
+                                <span><i class="fas fa-eye"></i> 3.8K</span>
+                                <span><i class="fas fa-star"></i> 4.7</span>
+                            </div>
+                            <button class="btn btn-primary w-100 mt-3">View Resource</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Why Choose Digital Library?</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="feature-box">
+                        <div class="feature-icon"><i class="fas fa-search"></i></div>
+                        <h5>Advanced Search</h5>
+                        <p>Find exactly what you need with our powerful search and filtering system</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-box">
+                        <div class="feature-icon"><i class="fas fa-tag"></i></div>
+                        <h5>Organized Categories</h5>
+                        <p>Resources organized by subject, level, and type for easy navigation</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-box">
+                        <div class="feature-icon"><i class="fas fa-download"></i></div>
+                        <h5>Easy Downloads</h5>
+                        <p>Download materials in multiple formats for your convenience</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-box">
+                        <div class="feature-icon"><i class="fas fa-star"></i></div>
+                        <h5>User Ratings</h5>
+                        <p>Community ratings and reviews help identify quality resources</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-box">
+                        <div class="feature-icon"><i class="fas fa-bookmark"></i></div>
+                        <h5>Save for Later</h5>
+                        <p>Bookmark your favorite resources for quick access anytime</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-box">
+                        <div class="feature-icon"><i class="fas fa-chart-bar"></i></div>
+                        <h5>Analytics</h5>
+                        <p>Track your learning progress and resource usage statistics</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 60px 0;">
+        <div class="container text-center">
+            <h2 class="mb-4">Ready to Start Learning?</h2>
+            <p class="fs-5 mb-4">Join thousands of students and educators using Digital Library</p>
+            <button class="btn btn-light btn-lg me-3">Get Started</button>
+            <button class="btn btn-outline-light btn-lg">Learn More</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: #2c3e50; color: white; padding: 30px 0; margin-top: 40px;">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-md-3">
+                    <h5>Digital Library</h5>
+                    <p class="small">Making education accessible to all</p>
+                </div>
+                <div class="col-md-3">
+                    <h6>Quick Links</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="#" class="text-white-50">Browse Resources</a></li>
+                        <li><a href="#" class="text-white-50">Upload Materials</a></li>
+                        <li><a href="#" class="text-white-50">Admin Panel</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6>Support</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="#" class="text-white-50">User Guide</a></li>
+                        <li><a href="#" class="text-white-50">API Docs</a></li>
+                        <li><a href="#" class="text-white-50">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6>Status</h6>
+                    <p class="small">
+                        <span class="badge bg-success">Backend: Ready</span>
+                        <span class="badge bg-success">Frontend: Running</span>
+                    </p>
+                </div>
+            </div>
+            <hr style="border-color: rgba(255,255,255,0.1);">
+            <div class="text-center small text-white-50">
+                <p>&copy; 2026 Digital Library. All rights reserved. | MIT License</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Add click handlers for demo
+        document.querySelectorAll('.btn-primary, .btn-light').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                if (this.textContent.includes('View Resource')) {
+                    alert('Resource detail page would load here\n\nFull application includes:\n✓ Resource details\n✓ Reviews & ratings\n✓ Download tracking\n✓ User dashboard');
+                } else if (this.textContent.includes('Search')) {
+                    alert('Advanced search page with filters:\n✓ Category\n✓ Level\n✓ Resource Type\n✓ Subject\n✓ Language');
+                } else if (this.textContent.includes('Login')) {
+                    alert('Login page with:\n✓ Email/Password auth\n✓ JWT tokens\n✓ Role-based access\n✓ Session management');
+                } else if (this.textContent.includes('Register')) {
+                    alert('Registration with:\n✓ Student/Educator roles\n✓ Password hashing\n✓ Email verification\n✓ Institution selection');
+                } else if (this.textContent.includes('Get Started')) {
+                    alert('Backend API is ready!\n\nStart the servers:\ncd server && npm install && npm run dev\ncd client && npm install && npm start');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
