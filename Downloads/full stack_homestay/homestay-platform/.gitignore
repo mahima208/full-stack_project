@@ -21,3 +21,33 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+# Ignore parent directory files
+../../../
+../../
+../.anaconda/
+../.aws/
+../.bash_history
+../.conda/
+../.condarc/
+../.continuum/
+../.copilot/
+../.eclipse/
+../.gitconfig
+../.ipynb_checkpoints/
+../.ipython/
+../.jupyter/
+../.keras/
+../.lemminx/
+../.lesshst
+../.m2/
+../.matplotlib/
+../.node_repl_history
+../.p2/
+../.packettracer
+../.sts4/
+../.vscode/
+../AppData/
+../Cisco Packet Tracer 8.2.2/
+../Contacts/
+../Documents/
+../.pdf
